@@ -13,5 +13,5 @@
 7. Создать тестовый проект
     1. Создать пустую папку `TestProject` и открыть в ней консоль `cmd`
     2. Создать консольный проект `dotnet new console`
-    3. Добавить в проект пакет `dotnet add package RRJ-Express.ContainerCore`
+    3. Добавить в проект пакет `dotnet add package {pacageName}`
     4. Проверить, что пакет был добавлен `type TestProject.csproj`
