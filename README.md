@@ -83,3 +83,16 @@ jobs:
 
 
 ### Если все настроено, при публикации в ветку "master" будет происходить публикация проекта
+
+## Как проверить этапы
+
+#### при коммите появится информация о результе
+
+желтый кружок в процессе и галочка когда процесс прошёл успешно
+![Demo](https://github.com/Platonenkov/AutoBuild-AutoPublish/blob/main/Source/7.jpg)
+
+#### нажмите на него чтобы увидеть детали
+![Demo](https://github.com/Platonenkov/AutoBuild-AutoPublish/blob/main/Source/8.jpg)
+
+#### Осмотрите подробности если были ошибки
+![Demo](https://github.com/Platonenkov/AutoBuild-AutoPublish/blob/main/Source/9.jpg)
