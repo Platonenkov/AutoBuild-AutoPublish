@@ -48,7 +48,24 @@ jobs:
       run: dotnet nuget push "**/*.nupkg" --skip-duplicate --source https://nuget.pkg.github.com/{"RepositoryOwener"}/index.json -k ${{secrets.GITHUB_TOKEN}}       
                                 # опубликовать пакет в личном репозитории NuGet   
     - name: Publishing
-      run: dotnet nuget push {"ProjectName"}/bin/Release/*.nupkg -k ${{ secrets.NuGetApiKey }} --skip-duplicate -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push "**/*.nupkg" -k ${{ secrets.NuGetApiKey }} --skip-duplicate -s https://api.nuget.org/v3/index.json
+```
+
+#### 3.1 Для проектов Windows иправьте секцию
+```
+jobs:
+  build:
+    runs-on: windows-latest
+    name: Update package
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@master
+      
+      - name: Use .NET 5.0.x
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.x
 ```
 #### 4. 37-38 строка для публикации пакета на GitHub, 40-41 для публикации на NuGet
 
